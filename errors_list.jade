@@ -1,0 +1,9 @@
+template(name='meteorErrors')
+  .errors
+    each errors
+      +meteorError
+
+template(name='meteorError')
+  .alert.alert-danger(role='alert')
+    button.close(type='button', data-dismiss='alert') &times;
+    span= message
