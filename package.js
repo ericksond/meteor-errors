@@ -15,10 +15,10 @@ Package.onUse(function(api, where) {
     api.export('Errors')
 });
 
-/*
+
 Package.onTest(function(api) {
-  api.use('tinytest');
-  api.use('ericksond:errors');
-  api.addFiles('ericksond:errors-tests.js');
+  api.use('ericksond:errors', 'client');
+  api.use(['tinytest', 'test-helpers'], 'client');
+
+  api.addFiles('errors_tests.js', 'client');
 });
-*/
