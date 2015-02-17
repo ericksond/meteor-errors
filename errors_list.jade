@@ -1,9 +1,9 @@
-template(name='meteorErrors')
+template(name='meteorErrors-disabled')
   .errors
     each errors
       +meteorError
 
-template(name='meteorError')
+template(name='meteorError-disabled')
   .alert.alert-danger(role='alert')
     button.close(type='button', data-dismiss='alert') &times;
     span= message

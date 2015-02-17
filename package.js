@@ -8,15 +8,17 @@ Package.describe({
 
 Package.onUse(function(api, where) {
   api.versionsFrom('1.0.3.1');
-  api.use(['minimongo', 'mongo-livedata', 'templating'], 'client')
-  api.addFiles(['errors.js', 'errors_list.jade', 'errors_list.js'], 'client');
+  api.use(['mongo', 'minimongo', 'templating'], 'client')
+  api.addFiles(['errors.js', 'errors_list.jade', 'errors_list.html', 'errors_list.js'], 'client');
 
   if (api.export)
     api.export('Errors')
 });
 
+/*
 Package.onTest(function(api) {
   api.use('tinytest');
   api.use('ericksond:errors');
   api.addFiles('ericksond:errors-tests.js');
 });
+*/
