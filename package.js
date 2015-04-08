@@ -6,9 +6,8 @@ Package.describe({
   documentation: 'README.md'
 });
 
-Package.onUse(function(api, where) {
+Package.onUse(function(api) {
   api.versionsFrom('1.0.3.1');
-  api.use(['mongo', 'minimongo', 'templating'], 'client')
   api.addFiles(['errors.js', 'errors_list.jade', 'errors_list.html', 'errors_list.js'], 'client');
 
   if (api.export)
@@ -18,7 +17,5 @@ Package.onUse(function(api, where) {
 
 Package.onTest(function(api) {
   api.use('ericksond:errors', 'client');
-  api.use(['tinytest', 'test-helpers'], 'client');
-
   api.addFiles('errors_tests.js', 'client');
 });
